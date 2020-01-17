@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+# 로컬 네트워크 상에서 1대 1 통신구현 / Listener
+
 import rospy
 from std_msgs.msg import String
 

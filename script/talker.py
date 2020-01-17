@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # license removed for brevity
+
+
+# 로컬 네트워크 상에서 1대 1 통신구현 / Talker
+
 import rospy
 from std_msgs.msg import String
 
