@@ -20,14 +20,14 @@ SHOW_VIS = True
 FAN_ANGLE = np.pi/5.0
 TARGET_DISTANCE = 1.0
 MEDIAN_FILTER_SIZE = 141
-KP = 1  # distance term
-KD = 1  # angle term
+KP = 5  # distance term
+KD = 6  # angle term
 PUBLISH_LINE = True
 HISTORY_SIZE = 5  # Size of the circular array for smoothing steering commands
 PUBLISH_RATE = 20.0  # number of control commands to publish per second
-SPEED = 1
+SPEED = 0.25
 
-EPSILON = 0.000001
+EPSILON = 0.02
 
 
 class CircularArray(object):
@@ -305,5 +305,5 @@ class WallFollower:
 
 if __name__ == "__main__":
     rospy.init_node('wall_follower')
-    wall_follower = WallFollower(RIGHT)
+    wall_follower = WallFollower(LEFT)
     rospy.spin()
